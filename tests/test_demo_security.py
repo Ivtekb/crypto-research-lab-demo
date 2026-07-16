@@ -117,3 +117,8 @@ def test_demo_keeps_signal_glossary():
 def test_demo_has_no_full_update_button():
     assert "Run full update now" not in APP_SOURCE
     assert "Pipeline Update" not in APP_SOURCE
+
+
+def test_demo_hides_dataframe_csv_download():
+    assert 'button[aria-label="Download as CSV"]' in APP_SOURCE
+    assert "display: none !important" in APP_SOURCE
