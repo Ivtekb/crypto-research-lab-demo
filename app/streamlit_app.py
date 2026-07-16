@@ -378,6 +378,9 @@ def render_dashboard_style() -> None:
         div[data-testid="stDataFrame"] {
             font-size: 0.88rem;
         }
+        button[aria-label="Download as CSV"] {
+            display: none !important;
+        }
         </style>
         """,
         unsafe_allow_html=True,
