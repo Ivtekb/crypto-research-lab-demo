@@ -18,9 +18,9 @@ Open `http://localhost:8501`.
 
 ## Data boundary
 
-- The repository must remain private.
-- The hosted app may be public.
+- The dedicated demo repository and hosted app may be public after the security checks pass.
 - `demo_data/demo_bundle.sqlite3` contains only values intentionally exposed in the UI.
+- Because the repository is public, visitors can download the demo bundle; it contains no hidden research fields beyond the visible demo tables.
 - There is no data download button and no pipeline update action.
 - A visitor can still copy values visible in the browser. Hidden source data is not included in the bundle.
 
