@@ -187,7 +187,7 @@ CONTROLLED_TEXT_COLUMNS = {
 REVIEW_FLAG_LABELS = {
     "missing_unlock_data": "Missing unlock schedule",
     "insufficient_historical_calibration": "Not enough historical calibration",
-    "missing_cg_id": "Missing CoinGecko ID",
+    "missing_cg_id": "Missing asset identifier",
     "token_unlock_qa_required": "Unlock data requires QA",
 }
 
@@ -421,7 +421,7 @@ def load_dashboard_summary() -> dict[str, str]:
 def render_demo_sidebar() -> None:
     metadata = load_demo_metadata()
     st.sidebar.header("Demo View")
-    st.sidebar.caption("View-only snapshot. The research pipeline and source files are not connected to this app.")
+    st.sidebar.caption("View-only prepared research snapshot.")
     generated_at = metadata.get("generated_at_utc")
     if generated_at:
         st.sidebar.caption(f"Data prepared: {generated_at}")
