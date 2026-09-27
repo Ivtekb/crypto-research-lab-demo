@@ -88,6 +88,13 @@ def test_demo_app_has_no_pipeline_or_file_export_access():
     assert not any(term in APP_SOURCE for term in forbidden)
 
 
+def test_demo_app_does_not_name_data_sources():
+    public_source = APP_SOURCE.lower()
+    assert "coingecko" not in public_source
+    assert "defillama" not in public_source
+    assert "source files are not connected" not in public_source
+
+
 def test_loader_is_read_only_and_table_limited():
     assert "mode=ro" in LOADER_SOURCE
     assert "ALLOWED_TABLES" in LOADER_SOURCE
